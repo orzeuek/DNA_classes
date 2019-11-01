@@ -1,0 +1,16 @@
+{
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "typescript": "^2.9.1"
+  },
+  "dependencies": {
+    "ts-option": "^1.1.4",
+    "js-joda": "^1.11.0",
+    "folktale": "2.3.2",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
