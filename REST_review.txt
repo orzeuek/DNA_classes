@@ -1,0 +1,21 @@
+Thoughts about my REST API after "REST week":
+- /auth endpoint is not much descriptive, it should be more like "/token" or something.
+also it use POST, from one hand, token is created with that request but user intention is
+to GET that token, not just to create it.
+- /fares/query is not much descriptive. I think it should be more like /fare-options because
+that's what you are looking for. In response you have a list of fare-options. That's in terms
+of HEX client. In terms of others, you will get fare-options and journeys, so potentially 
+we should call it like "plan" so maybe GET /jp/plan?origin=XX&dest=YY ..... 
+Also, there is no cache management. There might be....
+- All "order-service" entities are in single form "/ticket/1", "/trip/1" - they should be
+plural, like "/tickets/1", "/trips/1"
+- For HATEOAS more common name is "dependencies" instead of "links"
+- "/st-card-payment/{id}/3ds" endpoint is not much descriptive.... however it's endpoint
+to use by automated process (bank redirect), so not much to worry about
+- DELETE "/st-card/{id}" return 422.... if card do not exist, return success - it might 
+be already deleted or not exist anyway.
+- POSTs for creating new payment, looks different in each payment method. It potentially can
+be standarized (I mean URI not payload).
+- "/refund/order/{orderId}" is not ok. It should be more like GET /refunds?order=XXX
+- same with "/ticket-barcode/{orderId}/{ticketId}/{barcodeMedium}" should be GET "/barcodes?queryParams..."
+
