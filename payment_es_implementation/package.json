@@ -11,6 +11,6 @@
     "ts-option": "^1.1.4",
     "js-joda": "^1.11.0",
     "folktale": "2.3.2",
-    "jsonwebtoken": "^8.5.1"
+    "jsonwebtoken": "^9.0.0"
   }
 }
